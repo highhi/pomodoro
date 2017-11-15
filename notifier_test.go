@@ -4,6 +4,6 @@ import (
 	"testing"
 )
 
-func TestTimer(t *testing.T) {
+func TestNotifier(t *testing.T) {
 	
 }
