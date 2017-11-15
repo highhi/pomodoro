@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// Content .
+// Content.
 type Content struct {
 	Title   string
 	Message string
@@ -47,7 +47,7 @@ func push(title string, message string) {
 	exec.Command(cmdTerminalNotifier, optTitle, title, optMessage, message).Run()
 }
 
-// Notifier .
+// Notifier.
 func Notifier(w Content, b Content) {
 	if !checkTerminalNotifier() {
 		return
@@ -64,3 +64,15 @@ func Notifier(w Content, b Content) {
 		time.Sleep(10 * time.Minute)
 	}
 }
+
+// Example.
+
+// import(
+// 	"github.com/highhi/pomodoro"
+// )
+
+// func main()  {
+// 	w := pomodoro.Content{Title: "作業開始", Message: "集中しよう!"}
+// 	b := pomodoro.Content{Title: "休憩", Message: "ちょっと一休み"}
+// 	pomodoro.Notifier(w, b)
+// }
